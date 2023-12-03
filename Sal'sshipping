@@ -1,0 +1,27 @@
+weight = 1.5
+Drone_shipping = True
+Gound_shipping_flatcharge = 20.00
+Ground_shipping_premium = 125.00
+Drone_shipping_flatcharge = 0.00
+
+#Ground Shipping
+if weight <= 2 and Drone_shipping == False:
+  print(weight * 1.50 + Gound_shipping_flatcharge)
+elif weight > 2 and weight <= 6 and Drone_shipping == False:
+  print(weight * 3.00 + Gound_shipping_flatcharge)
+elif weight > 6 and weight <= 10 and Drone_shipping == False:
+  print(weight * 4.00 +  Gound_shipping_flatcharge)
+elif weight > 10 and weight < 22 and Drone_shipping == False:
+  print(weight * 4.75 + Gound_shipping_flatcharge)
+#Gound Shipping Premium
+elif weight > 22 and Drone_shipping == False:
+  print(Ground_shipping_premium)
+#Drone Shipping
+elif weight <= 2 and Drone_shipping == True:
+  print(weight * 4.50 + Drone_shipping_flatcharge)
+elif weight > 2 and weight <= 6 and Drone_shipping == True:
+  print(weight * 9.00 + Drone_shipping_flatcharge)
+elif weight > 6 and weight <= 10 and Drone_shipping == True:
+  print(weight * 12.00 +  Drone_shipping_flatcharge)
+elif weight > 10 and Drone_shipping == True:
+  print(weight * 14.25 + Drone_shipping_flatcharge)
